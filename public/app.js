@@ -1,4 +1,4 @@
-const API='https://GANTI-DENGAN-URL-WORKER.workers.dev/api';let products=[];
+const API='https://upgamez-api.penyimpnan1.workers.dev/api';let products=[];
 const money=n=>'Rp '+Number(n||0).toLocaleString('id-ID');
 async function request(path,body){const r=await fetch(API+path,{method:body?'POST':'GET',headers:{'Content-Type':'application/json'},body:body?JSON.stringify(body):undefined});const j=await r.json();if(!r.ok||!j.ok)throw Error(j.error||'Permintaan gagal');return j}
 function render(list){const el=document.querySelector('#product-grid');el.innerHTML=list.length?list.map(p=>`<article class="product"><div class="product-icon">🎮</div><h3>${esc(p.name)}</h3><p>${esc(p.game||'Produk game')} · ${esc(p.description||'Top up game')}</p><div class="product-bottom"><span class="price">${money(p.price)}</span><button class="buy-btn" data-id="${esc(p.id)}">Beli →</button></div></article>`).join(''):'<p>Belum ada produk tersedia.</p>';el.querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>openOrder(b.dataset.id))}
