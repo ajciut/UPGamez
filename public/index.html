@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090d1b"><title>UPGamez — Top Up Game</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="/"><span class="brand-icon">U</span> UP<span>Gamez</span></a>
+<nav><a href="#beranda">Beranda</a><a href="#produk">Produk</a><a href="#cara">Cara Order</a></nav><a class="admin-link" href="/admin.html">Admin ↗</a></header>
+<main>
+<section class="hero" id="beranda"><div class="hero-copy"><span class="eyebrow">✦ GAME TOP UP STORE</span><h1>LEVEL UP.<br><em>PLAY MORE.</em></h1><p>Top up game favoritmu dengan proses mudah. Pilih produk, masukkan Player ID, lalu selesaikan pembayaran.</p><a class="primary-btn" href="#produk">Jelajahi Produk <b>→</b></a><div class="trust"><span>✓ Proses mudah</span><span>✓ Bantuan admin</span><span>✓ Harga transparan</span></div></div><div class="hero-art"><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="hero-card"><span>UP</span><b>GAME<br>ON!</b><small>YOUR NEXT LEVEL STARTS HERE</small></div><div class="float-tag">⚡ TOP UP CENTER</div></div></section>
+<section class="section" id="produk"><div class="section-head"><div><span class="eyebrow">PILIH GAME FAVORITMU</span><h2>Produk <em>Populer</em></h2></div><input id="search" class="search" placeholder="Cari game atau produk..."></div><div id="product-grid" class="product-grid"><div class="loading">Memuat produk...</div></div></section>
+<section class="how section" id="cara"><span class="eyebrow">MUDAH DAN PRAKTIS</span><h2>Mulai dalam <em>3 langkah</em></h2><div class="steps"><article><b>01</b><h3>Pilih produk</h3><p>Pilih game dan nominal yang kamu inginkan.</p></article><article><b>02</b><h3>Isi data akun</h3><p>Masukkan Player ID dan kontak yang bisa dihubungi.</p></article><article><b>03</b><h3>Bayar & konfirmasi</h3><p>Ikuti instruksi pembayaran dan tunggu pesanan diproses.</p></article></div></section>
+</main><footer><a class="brand" href="#"><span class="brand-icon">U</span> UP<span>Gamez</span></a><small>© <span id="year"></span> UPGamez. Mainkan level berikutnya.</small></footer>
+<div class="modal-backdrop" id="order-modal"><div class="modal"><button class="close" id="close-modal">×</button><span class="eyebrow">BUAT PESANAN</span><h2 id="modal-title">Pilih produk</h2><form id="order-form"><input type="hidden" id="product-id"><label>Player ID<input id="player-id" required placeholder="Masukkan Player ID"></label><label>Server / Zone ID (jika ada)<input id="server-id" placeholder="Opsional"></label><label>Nomor WhatsApp<input id="customer-phone" required placeholder="08xxxxxxxxxx"></label><label>Nama pembeli<input id="customer-name" required placeholder="Nama kamu"></label><button class="primary-btn full" type="submit">Buat Pesanan</button></form><div id="order-result"></div></div></div>
+<script src="/app.js"></script></body></html>
