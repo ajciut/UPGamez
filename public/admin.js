@@ -1,4 +1,4 @@
-const API='https://GANTI-DENGAN-URL-WORKER.workers.dev/api';let password=sessionStorage.getItem('ug_admin')||'';
+const API='https://upgamez-api.penyimpnan1.workers.dev/api';let password=sessionStorage.getItem('ug_admin')||'';
 async function req(path,body){const r=await fetch(API+path,{method:body?'POST':'GET',headers:{'Content-Type':'application/json','x-admin-password':password},body:body?JSON.stringify(body):undefined});const j=await r.json();if(!r.ok||!j.ok)throw Error(j.error||'Gagal');return j}
 const $=s=>document.querySelector(s),money=n=>'Rp '+Number(n||0).toLocaleString('id-ID');
 function show(){ $('#login-panel').hidden=true;$('#dashboard').hidden=false;refresh()}
